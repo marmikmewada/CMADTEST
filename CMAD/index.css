@@ -254,7 +254,67 @@
 /* footer ends here  */
 
 @media only screen and (max-width: 1150px) {
-  .navbar {
+  .container>.navbar {
     width: 40%;
   }
+  .section > .content > .welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .welcome > .right {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .welcome > .left {
+    padding: 0;
+  }
+  .welcome > .left > h1 {
+    font-size: 3em;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .footer > .address {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  .footer>div>h1{
+    font-size: 1.2em;
+  }
+  .footer > div:nth-child(2) {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: none;
+    border-right: none;
+  }
+  .footer > .phone {
+    grid-row: 2/3;
+    grid-column: 1/2;
+   
+  }
+  .footer > .email {
+    grid-row: 3/-1;
+    grid-column: 1/2;
+  }
+}
+
+@media only screen and (max-width: 577px) {
+  .container>.navbar{
+    width: 80%;
+  }
+  .container>.section>.content>.welcome{
+    padding: 0 1em;
+  }
+  .cards{
+    padding: 0 1em;
+  }
+  .cards>div{
+    padding: 1rem 1rem;
+  }
+
 }

@@ -171,29 +171,113 @@
     align-items: center;
     justify-content: center;
     padding: 0 5rem;
+    gap: 1rem;
     
+}
+.links>h1{
+  color: var(--heading-color);
 }
 
 .links>.table{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 1rem;
+    width: 100%;
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(18,1fr);
+   
+
+
 
 }
-.links>.table div{
+.links>.last{
+  padding-top: 2em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.footer {
+  padding: 4rem;
+  background-color: var(--heading-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 1em;
+}
+.footer > div:nth-child(2) {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+.footer > div {
+  padding: 1em;
+}
+.footer > div > h1 {
+  color: var(--color1);
+  text-decoration: underline;
+  font-size: 1.8em;
+}
+.footer > .address {
+  grid-column: 1/2;
+}
+.footer > .phone {
+  grid-column: 2/3;
+}
+.footer > .email {
+  grid-column: 3/-1;
+}
+/* footer ends here  */
+
+
+
+@media only screen and (max-width: 1000px) { 
+  .container>.navbar {
+    width: 40%;
+  }
+  .section>.links{
+    padding: 0 1rem;
+  }
+  .footer {
     display: grid;
-    grid-template-columns:1fr 1fr 1fr;
-    padding: 1rem;
-    gap: 10em;
-}
-.table>div>p:nth-child(1){
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .footer > .address {
+    grid-row: 1/2;
     grid-column: 1/2;
-}
-.table>div>p:nth-child(2){
-    grid-column: 2/3;
-}
-.table>div>p:nth-child(3){
-    grid-column: 3/-1;
+  }
+  .footer>div>h1{
+    font-size: 1.2em;
+  }
+  .footer > div:nth-child(2) {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: none;
+    border-right: none;
+  }
+  .footer > .phone {
+    grid-row: 2/3;
+    grid-column: 1/2;
+   
+  }
+  .footer > .email {
+    grid-row: 3/-1;
+    grid-column: 1/2;
+  }
+  
+}            
+@media only screen and (max-width: 577px) { 
+  .container>.navbar {
+    width: 80%;
+  }
+  .section>.content{
+    padding: 2rem 1rem;
+  }
+  .section>.links>.table>div>h2{
+    font-size: 0.8rem;
+  }
+  .section>.links>.table>div>p{
+    font-size: 0.5rem;
+  }
+
 }
