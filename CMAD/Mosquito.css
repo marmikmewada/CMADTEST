@@ -125,5 +125,107 @@
     grid-row: 1/2;
     z-index: 1;
 }
+/* section top starts below  */
+.section > .top {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+  }
+  .section > .top > i {
+    font-size: 2em;
+    margin-left: 1em;
+    color: var(--heading-color);
+  }
+  /* section top ands above  */
+
+  .content{
+    padding: 2rem 4rem;
+  }
+  p,h1,img, .three-videos {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .three-videos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    min-height: 70vh;
+    overflow: hidden;
+    gap: 1rem;
+    
+  }
+  .content2>img{
+    height: 20vh;
+    width: 20%;
+  }
+
 /* section ends above  */
+
+/* footer starts here  */
+.footer {
+    padding: 4rem;
+    background-color: var(--heading-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 1em;
+  }
+  .footer > div:nth-child(2) {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+  }
+  .footer > div {
+    padding: 1em;
+  }
+  .footer > div > h1 {
+    color: var(--color1);
+    text-decoration: underline;
+    font-size: 1em;
+  }
+  .footer > .address {
+    grid-column: 1/2;
+  }
+  .footer > .phone {
+    grid-column: 2/3;
+  }
+  .footer > .email {
+    grid-column: 3/-1;
+  }
+  /* footer ends here  */
+
+  @media only screen and (max-width: 700px) {
+    .container > .navbar {
+      width: 80%;
+    }
+    .content{
+        padding: 2rem 1rem;
+    }
+    .three-videos{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+    }
+    .footer {
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+      }
+      .footer > .address {
+        grid-row: 1/2;
+        grid-column: 1/2;
+      }
+      .footer > div:nth-child(2) {
+        grid-column: 1/2;
+        border-left: 0;
+        border-right: 0;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        grid-row: 2/3;
+      }
+      .footer > .email {
+        grid-column: 1/2;
+    
+        grid-row: 3/-1;
+      }
+  }
 

@@ -1,129 +1,249 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500;1,200&display=swap");
 
-
 /* utitlities  */
 
-:root{
-    font: 'Poppins', sans-serif;
-    --color1 : white;
-    --color2 : black;
-    --buttons : rgba(41,109,245,255);
-    --heading-color: rgba(65,82,132,255);
-    --details-color: rgba(68,133,221,255);
+:root {
+  font: "Poppins", sans-serif;
+  --color1: white;
+  --color2: black;
+  --buttons: rgba(41, 109, 245, 255);
+  --heading-color: rgba(65, 82, 132, 255);
+  --details-color: rgba(68, 133, 221, 255);
 }
-#hidden{
-    display: none;
+#hidden {
+  display: none;
 }
 
 /* utilities ends  */
 
 /* global starts here  */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 /* global ends here  */
 
 /* container starts below  */
-.container{
-    width: 100vw;
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 }
 /* container ends above  */
 
 /* navbar starts below  */
 
-.container>.navbar {
-    grid-column: 1/2;
-    grid-row: 1/2; 
-    height: 100%;
-    width: 20%;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: start;
-    background-color: var(--heading-color);
-    gap: 2em;
+.container > .navbar {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  height: 100%;
+  width: 20%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  background-color: var(--heading-color);
+  gap: 2em;
 }
-.navbar>i{
-    font-size: 2em;
-    color: white;
-    align-self: end;
-    padding: 1rem 1rem 0 0;
+.navbar > i {
+  font-size: 2em;
+  color: white;
+  align-self: end;
+  padding: 1rem 1rem 0 0;
 }
-.logo{
-    width: 100%;
+.logo {
+  width: 100%;
 }
-.logo>h1{
-    font-size: 1.3em;
-    padding-left: 0.5em;
-    color: white;
+.logo > h1 {
+  font-size: 1.3em;
+  padding-left: 0.5em;
+  color: white;
 }
-.logo>h2{
-    font-size: 1em;
-    color: white;
-    padding-left: 0.5em;
+.logo > h2 {
+  font-size: 1em;
+  color: white;
+  padding-left: 0.5em;
 }
-.navbar>ul{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
+.navbar > ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
 }
-.navbar>ul>li{
-    list-style: none;
-    text-align: start;
-    padding: 0.5rem;
-    width: 100%;
-    padding-left: 1em;
-
+.navbar > ul > li {
+  list-style: none;
+  text-align: start;
+  padding: 0.5rem;
+  width: 100%;
+  padding-left: 1em;
 }
-.navbar>ul>li:hover{
-    background: white;
-    transition: all 1s ease-in-out;
+.navbar > ul > li:hover {
+  background: white;
+  transition: all 1s ease-in-out;
 }
-.navbar>ul>li:hover a{
-    color: var(--heading-color);
+.navbar > ul > li:hover a {
+  color: var(--heading-color);
 }
-.navbar>ul>li>a{
-    font-size: 0.8em;
-    color: white;
-    font-family: 'Poppins', 200;
-}
-
-.navbar>ul>li>a{
-    text-decoration: none;
+.navbar > ul > li > a {
+  font-size: 0.8em;
+  color: white;
+  font-family: "Poppins", 200;
 }
 
-.navbar>button{
-    height: 3em;
-    width: 80%;
-    border: none;
-    border-radius: 3em;
-    margin-left: 1em;
-    font-size: 1em;
-    color: var(--heading-color);
-    font-weight: 600;
+.navbar > ul > li > a {
+  text-decoration: none;
+}
 
+.navbar > button {
+  height: 3em;
+  width: 80%;
+  border: none;
+  border-radius: 3em;
+  margin-left: 1em;
+  font-size: 1em;
+  color: var(--heading-color);
+  font-weight: 600;
 }
 
 /* navbar ends above  */
 
 /* section starts below  */
-.container>.section{
-    grid-column: 1/2;
-    grid-row: 1/2;
-    z-index: 1;
+.container > .section {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  z-index: 1;
 }
+
+/* section top starts below  */
+.section > .top {
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+}
+.section > .top > i {
+  font-size: 2em;
+  margin-left: 1em;
+  color: var(--heading-color);
+}
+/* section top ands above  */
+h1 {
+  color: var(--heading-color);
+}
+.content {
+  padding: 2rem 4rem;
+}
+.content2 {
+  padding: 2rem 4rem;
+}
+.dates {
+  padding: 2rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+}
+.content3 {
+  padding: 2rem 4rem;
+}
+.content4 {
+  padding: 2rem 4rem;
+}
+
 /* section ends above  */
 
+/* footer starts here  */
+.footer {
+  padding: 4rem;
+  background-color: var(--heading-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 1em;
+}
+.footer > div:nth-child(2) {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+.footer > div {
+  padding: 1em;
+}
+.footer > div > h1 {
+  color: var(--color1);
+  text-decoration: underline;
+  font-size: 1em;
+}
+.footer > .address {
+  grid-column: 1/2;
+}
+.footer > .phone {
+  grid-column: 2/3;
+}
+.footer > .email {
+  grid-column: 3/-1;
+}
+/* footer ends here  */
+
+@media only screen and (max-width: 1150px) {
+  .container > .navbar {
+    width: 40%;
+  }
+  .dates {
+    padding: 2rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+  }
+  .content {
+    padding: 2rem 1rem;
+  }
+  .content2 {
+    padding: 2rem 1rem;
+  }
+  .footer {
+    padding: 2rem;
+  }
+}
+
+@media only screen and (max-width: 577px) {
+  .container > .navbar {
+    width: 80%;
+  }
+  .dates {
+    padding: 2rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+  .footer {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .footer > .address {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  .footer > div:nth-child(2) {
+    grid-column: 1/2;
+    border-left: 0;
+    border-right: 0;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    grid-row: 2/3;
+  }
+  .footer > .email {
+    grid-column: 1/2;
+
+    grid-row: 3/-1;
+  }
+}
