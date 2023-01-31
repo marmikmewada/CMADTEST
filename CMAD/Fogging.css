@@ -241,4 +241,7 @@
     .footer {
       padding: 1rem;
     }
+    .footer>div>h1{
+      font-size: 0.8rem;
+  }
 }
